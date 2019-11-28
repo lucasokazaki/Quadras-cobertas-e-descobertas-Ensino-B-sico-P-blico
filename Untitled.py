@@ -84,7 +84,7 @@ plt.bar(x, y)
 plt.show()
 
 
-# In[140]:
+# In[141]:
 
 
 x = [2013, 2014, 2015, 2016, 2017]
@@ -117,12 +117,12 @@ plt.plot(x, y,  color ='y', label = 'Cobertas')
 plt.scatter(x, y, color = 'r', marker = '*', s=100)
 plt.plot(x, b,color = 'g', label = 'Descobertas')
 plt.scatter(x, b, color = 'm', marker = '*', s=100)
-for i, v in enumerate(y):
-    v = round(v, 2)
-    plt.text(x[i] - 0.2, v - 2000, str(v))
-for i, v in enumerate(b):
-    v = round(v, 2)
-    plt.text(x[i] - 0.2, v + 1000, str(v))
+for f, g in enumerate(y):
+    g = round(g, 2)
+    plt.text(x[f] - 0.2, g - 2000, str(g))
+for f, g in enumerate(b):
+    g = round(g, 2)
+    plt.text(x[f] - 0.2, g + 1000, str(g))
 plt.legend(bbox_to_anchor=(1, 1), loc='upper left')
 plt.show()
 
