@@ -58,7 +58,7 @@ print(f'Em 2016 {coberta_2016} estavam cobertas e {descoberta_2016} descobertas.
 print(f'Em 2017 {coberta_2017} estavam cobertas e {descoberta_2017} descobertas.')
 
 
-# In[20]:
+# In[58]:
 
 
 x = [2013, 2014, 2015, 2016, 2017]
@@ -68,8 +68,6 @@ plt.title('Quadras cobertas Ensino Básico Público')
 plt.xlabel('Ano')
 plt.ylabel('Escolas')
 plt.bar(x, y)
-plt.plot(x, y,  color ='k', label = '2013')
-plt.legend()
 plt.show()
 
 
@@ -86,7 +84,7 @@ plt.bar(x, y)
 plt.show()
 
 
-# In[55]:
+# In[87]:
 
 
 x = [2013, 2014, 2015, 2016, 2017]
@@ -98,18 +96,35 @@ ax1 = fig.add_subplot()
 plt.title('Quadras cobertas e descobertas Ensino Básico Público')
 plt.xlabel('Ano')
 plt.ylabel('Escolas')
-ax1.axhline(44000)
-ax1.axhline(42000)
-ax1.axhline(40000)
-ax1.axhline(38000)
-ax1.axhline(36000)
-ax1.axhline(34000)
-ax1.axhline(32000)
-ax1.axhline(30000)
+ax1.axhline(44000, linestyle = ':')
+ax1.axvline(2017.0, linestyle = ':')
+ax1.axhline(42000, linestyle = ':')
+ax1.axvline(2016.5, linestyle = ':')
+ax1.axhline(40000, linestyle = ':')
+ax1.axvline(2016.0, linestyle = ':')
+ax1.axhline(38000, linestyle = ':')
+ax1.axvline(2015.5, linestyle = ':')
+ax1.axhline(36000, linestyle = ':')
+ax1.axvline(2015.0, linestyle = ':')
+ax1.axhline(34000, linestyle = ':')
+ax1.axvline(2014.5, linestyle = ':')
+ax1.axhline(32000, linestyle = ':')
+ax1.axvline(2014.0, linestyle = ':')
+ax1.axhline(30000, linestyle = ':')
+ax1.axvline(2013.5, linestyle = ':')
+ax1.axvline(2013.0, linestyle = ':')
 plt.plot(x, y,  color ='y', label = 'Cobertas')
+plt.scatter(x, y, color = 'r', marker = '*', s=100)
 plt.plot(x, b,color = 'g', label = 'Descobertas')
-plt.legend()
+plt.scatter(x, b, color = 'm', marker = '*', s=100)
+plt.legend(bbox_to_anchor=(1, 1), loc='upper left')
 plt.show()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
